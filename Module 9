@@ -1,1 +1,11 @@
+ library("perm")
+ rm(list=ls())
+setwd("/Users/Miao/Documents/")
+fastfood <- read.csv("C://Users//Miao//Documents//fastfood.csv")
+lm(formula=empft~state, data=fastfood)
 
+lm(formula=wage_st ~ state, data=fastfood)
+
+fastfood$diff_empft <- fastfood$empft2-fastfood$empft
+> model5 <- lm(diff_empft ~ state, data = fastfood)
+> summary(model5)
